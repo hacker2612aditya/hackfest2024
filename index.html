@@ -3,6 +3,16 @@
 <script>
 	function showdetails(element, flower) {
 		document.getElementById("imgFlower").src = flower + ".jpg";
+		if (flower === 'Marigold')
+			document.getElementById("p1").innerHTML = "Scientific Name: Tagetes <br/> Temperature: 65-70 F <br/> Amount of water: 1.7 inches of water per week";
+		else if (flower === 'Rose')
+			document.getElementById("p1").innerHTML = "Scientific Name: Rosa <br/> Temperature: 65 F <br/> Amount of water: 1.5 inches of water per week";
+		else if (flower === 'Sunflower')
+			document.getElementById("p1").innerHTML = "Scientific Name: Helianthus annus <br/>Temperature: 75 F <br/> Amount of water: an inch of water per week";
+		else if (flower === 'Touch me not')
+			document.getElementById("p1").innerHTML = "Scientific Name: Mimosa pudica <br/> Temperature: 73 F <br/> Amount of water: 0.8 cups of water every 9 days";
+		else if (flower === 'cactus')
+			document.getElementById("p1").innerHTML = "Scientific Name: Cactaceae <br/> Temperature: around 83 F <br/> Amount of water: 1/4 a cup every week";
 	}
 </script>
 
@@ -16,15 +26,18 @@
 
 	<br>
 	<h2>
-		<button onclick="showdetails(this, 'Sunflowers')" class="w3-btn w3-yellow w3-hover-orange">Sunflower</button>
+		<button onclick="showdetails(this, 'Sunflower')" class="w3-btn w3-yellow w3-hover-orange">Sunflower</button>
 		<button onclick="showdetails(this, 'Rose')" class="w3-btn w3-blue w3-hover-orange">Rose</button>
-		<button onclick="showdetails(this, 'Touch me not')" class="w3-btn w3-yellow w3-hover-orange">Touch Me Not</button>
+		<button onclick="showdetails(this, 'Touch me not')" class="w3-btn w3-yellow w3-hover-orange">Touch Me
+			Not</button>
 		<button onclick="showdetails(this, 'Marigold')" class="w3-btn w3-blue w3-hover-orange">Marigold</button>
 		<button onclick="showdetails(this, 'cactus')" class="w3-btn w3-yellow w3-hover-orange">Cactus</button>
 
 	</h2>
 
 	<img id="imgFlower" width="700" />
+	<p id="p1"></p>
+
 
 </body>
 
